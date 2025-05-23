@@ -1,1 +1,31 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/* В этом файле будут храниться все значения переменных в исходном состоянии, 
+а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --font-main: "Inter-Variable";
+    --font-accent: "PressStart2P-Regular";
+    --font-weight-card-title: 700;
+    --font-weight-card-text: 400;
+    --width: 43.75rem;
+    --color-main: #000;
+    --color-accent: #fff;
+    --bg-gradient:
+        /* Горизонтальные полосы (слева направо) */
+        repeating-linear-gradient(90deg, 
+            #d3d3d3 0 2px, 
+            transparent 2px 4px
+        ),
+        /* Вертикальные полосы (сверху вниз) */
+        repeating-linear-gradient(180deg, 
+            #d3d3d3 0 2px, 
+            transparent 2px 4px
+        ),
+        /* Плавный градиент затемнения (сверху вниз) */
+        linear-gradient(180deg, 
+            #e7e7e7 0.01%, 
+            #1a1a1a 100%
+        );
+    --bg-color: #fff;
+    --contour-color: #000;
+    --fill-color: #FF0000;
+}
