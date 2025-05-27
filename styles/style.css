@@ -46,14 +46,14 @@
 }
 
 .header__title {
-  font-family: var(--font-accent, monospace);
+  font-family: var(--font-accent, fantasy);
   font-size: clamp(3.063rem, 2.063rem + 3.2vi, 4.063rem);
   vertical-align: bottom;
   text-transform: uppercase;
 }
 
 .header__text {
-  font-family: var(--font-accent, monospace);
+  font-family: var(--font-accent, fantasy);
   font-size: clamp(0.875rem, 0.313rem + 1.8vi, 1.438rem);
   text-transform: uppercase;
 }
@@ -79,12 +79,13 @@
   position: relative;
   /* inline-size: var(--width, 43.75rem); */
   block-size: var(--width, 43.75rem);
+  border-bottom: 2px solid #000;
 }
 
 .watermark {
   position: absolute;
   text-shadow: 1px #fff;
-  font-family: var(--font-accent, "PressStart2P-Regular", monospace);
+  font-family: var(--font-accent, "PressStart2P", fantasy);
   font-size: 14px;
   line-height: 100%;
   text-transform: uppercase;
@@ -92,6 +93,7 @@
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
   z-index: 1;
+  opacity: 0.5;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
@@ -111,15 +113,12 @@
 }
 
 .card__text {
-  border-top: 2px solid #000;
   font-size: 18px;
   line-height: 21px;
   padding: 25px 25px 27px;
 }
 
-.card__memories {
-  font-size: 18px;
-  line-height: 21px;
+.memories {
   padding: 0 25px 25px;
 }
 
@@ -127,9 +126,15 @@
   display: flex;
   align-self: self-end;
   align-items: flex-end;
-  gap: 12px;
+  gap: 6px;
   margin-block-end: 25px;
   margin-inline-end: 25px;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: 2px solid #000;
 }
 
 .card__icon-button {
@@ -137,9 +142,7 @@
   height: 38px;
   display: flex;
   background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-  border: 2px solid transparent;
+  border-color: transparent;
   transition: border-color 0.3s ease;
 }
 
@@ -147,14 +150,11 @@
   width: 130px;
   height: 38px;
   align-content: center;
-  cursor: pointer;
-  padding: 0;
-  border: 2px solid #000;
   background-color: transparent;
 }
 
 .button__text {
-  font-family: var(--font-accent, monospace);
+  font-family: var(--font-accent, fantasy);
   font-weight: var(--font-weight-card-text, 400);
   font-size: 14px;
   line-height: 90%;
@@ -169,15 +169,11 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0;
   background-color: #fff;
-  cursor: pointer;
-  border: 2px solid #000;
 }
 
 .dialog {
   width: 353px;
-  height: 191px;
   background-color: #fff;
   border: 2px solid #000;
 }
@@ -189,7 +185,6 @@
 .dialog:open {
   display: grid;
   grid-template-columns: 39px 234px;
-  grid-template-rows: 63px 38px;
   gap: 30px 20px;
   align-items: center;
   align-content: center;
@@ -221,38 +216,22 @@
   background-color: #fff;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  border: 2px solid #000;
-  cursor: pointer;
 }
 
-.card__like-button,
-.button__download,
-.button__ok {
+.button {
   transition: box-shadow 0.3s ease transform 0.5s ease-in-out;
   position: relative;
 }
 
-.card__icon-button:focus
-.card__like-button:focus
-.button__download:focus
-.button__ok:focus {
+button:focus {
   outline: none;
 }
 
-.card__icon-button:focus-visible {
-  border-color: var(--color-main, #000);
-}
-
-.card__like-button:focus-visible,
-.button__download:focus-visible,
-.button__ok:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--color-main, #000);
 }
 
-.card__like-button::before,
-.button__download::before,
-.button__ok::before {
+.button::before {
   content: '';
   display: block;
   position: absolute;
@@ -267,9 +246,7 @@
   z-index: 0;
 }
 
-.card__like-button:hover::before,
-.button__download:hover::before,
-.button__ok:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
@@ -278,6 +255,11 @@
   stroke: var(--color-accent, #fff);
   fill: var(--color-accent, #fff);
   z-index: 2;
+}
+
+.heart {
+  display: inline-block;
+  transform-origin: center;
 }
 
 .sparks {
@@ -383,7 +365,6 @@
 
   .dialog {
     width: 341px;
-    height: 191px;
   }
 
   .dialog:open {
