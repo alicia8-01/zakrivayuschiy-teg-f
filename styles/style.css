@@ -16,6 +16,7 @@
   background-image: var(--bg-gradient);
   background-size: cover;
   background-color: var(--bg-color, #fff);
+  background-attachment: fixed;
   font-family: var(--main-font, "Inter-Variable", serif);
   font-variation-settings: 'wght' var(--font-weight-card-text, 400);
   color: var(--color-main, #000);
@@ -60,7 +61,7 @@
 
 .main {
   display: flex;
-  gap: 52px;
+  gap: 50px;
   flex-direction: column;
   align-items: center;
   padding-block-end: 103px;
@@ -70,7 +71,7 @@
   font-variation-settings: 'wght' var(--font-weight-card-title, 700);
   font-size: 18px;
   border-bottom: 2px solid #000;
-  padding-block-start: 3px;
+  padding-block-start: 5px;
   padding-block-end: 3px;
   padding-inline: 10px;
 }
@@ -141,6 +142,7 @@ button {
   width: 39px;
   height: 38px;
   display: flex;
+  align-items: baseline;
   background-color: transparent;
   border-color: transparent;
   transition: border-color 0.3s ease;
@@ -172,6 +174,14 @@ button {
   background-color: #fff;
 }
 
+article.card:nth-of-type(3) .memories {
+  padding-bottom: 5px;
+}
+
+article.card:nth-of-type(7) .memories {
+  padding-bottom: 5px;
+}
+
 .dialog {
   width: 353px;
   background-color: #fff;
@@ -190,6 +200,7 @@ button {
   align-content: center;
   justify-content: center;
   justify-items: center;
+  padding: 31.5px 32.5px 30.5px 31.5px;
 }
 
 .dialog:open .dialog-floppy {
@@ -219,7 +230,7 @@ button {
 }
 
 .button {
-  transition: box-shadow 0.3s ease transform 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease;
   position: relative;
 }
 
@@ -229,6 +240,11 @@ button:focus {
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--color-main, #000);
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--contour-color);
+  transition: border 0.3s ease;
 }
 
 .button::before {
@@ -343,8 +359,87 @@ button:focus {
     padding-block: 120px;
   }
 
-  .card__text {
-    padding: 23px 25px 47px;
+  .card__image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  article.card:nth-of-type(1) .card__text {
+    padding: 30px 25px 28px;
+  }
+
+  article.card:nth-of-type(1) .memories {
+    padding: 0px 25px 45px;
+  }
+
+  article.card:not(:first-child) .card__text {
+    padding-right: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+  }
+
+  article.card:not(:first-child) .memories {
+    padding-bottom: 27px;
+  }
+
+  article.card:nth-of-type(2) .card__text {
+    padding-top: 27px;
+  }
+
+  article.card:nth-of-type(2) .memories {
+    padding-top: 11px;
+  }
+
+  article.card:nth-of-type(3) .card__text {
+    padding-top: 28px;
+    padding-bottom: 18px;
+  }
+
+  article.card:nth-of-type(3) .memories {
+    padding-top: 11px;
+    padding-bottom: 3px;
+  }
+
+  article.card:nth-of-type(4) .card__text {
+    padding-top: 29px;
+  }
+
+  article.card:nth-of-type(4) .memories {
+    padding-top: 10px;
+  }
+
+  article.card:nth-of-type(5) .card__text {
+    padding-top: 29px;
+  }
+
+  article.card:nth-of-type(5) .memories {
+    padding-top: 9px;
+  }
+
+  article.card:nth-of-type(6) .card__text {
+    padding-top: 30px;
+  }
+
+  article.card:nth-of-type(6) .memories {
+    padding-top: 9px;
+  }
+
+  article.card:nth-of-type(7) .card__text {
+    padding-top: 31px;
+  }
+
+  article.card:nth-of-type(7) .memories {
+    padding-top: 9px;
+    padding-bottom: 5px;
+  }
+
+  article.card:nth-of-type(8) .card__text {
+    padding-top: 30px;
+  }
+
+  article.card:nth-of-type(8) .memories {
+    padding-top: 10px;
   }
 
   .button__download {
