@@ -174,11 +174,7 @@ button {
   background-color: #fff;
 }
 
-article.card:nth-of-type(3) .memories {
-  padding-bottom: 5px;
-}
-
-article.card:nth-of-type(7) .memories {
+.memories__padding {
   padding-bottom: 5px;
 }
 
@@ -238,13 +234,13 @@ button:focus {
   outline: none;
 }
 
-.button:focus-visible {
-  box-shadow: 2px 2px 0 var(--color-main, #000);
-}
-
-.card__icon-button:focus-visible {
+button:focus-visible {
   border: 2px solid var(--contour-color);
   transition: border 0.3s ease;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--color-main, #000);
 }
 
 .button::before {
@@ -365,81 +361,20 @@ button:focus {
     aspect-ratio: 1 / 1;
   }
 
-  article.card:nth-of-type(1) .card__text {
+  .card__text {
     padding: 30px 25px 28px;
   }
 
-  article.card:nth-of-type(1) .memories {
+  .memories {
     padding: 0px 25px 45px;
   }
 
-  article.card:not(:first-child) .card__text {
-    padding-right: 25px;
-    padding-bottom: 15px;
-    padding-left: 25px;
+  .memories__padding-mobile {
+    padding-bottom: 22px;
   }
 
-  article.card:not(:first-child) .memories {
-    padding-bottom: 27px;
-  }
-
-  article.card:nth-of-type(2) .card__text {
-    padding-top: 27px;
-  }
-
-  article.card:nth-of-type(2) .memories {
-    padding-top: 11px;
-  }
-
-  article.card:nth-of-type(3) .card__text {
-    padding-top: 28px;
-    padding-bottom: 18px;
-  }
-
-  article.card:nth-of-type(3) .memories {
-    padding-top: 11px;
+  .memories__padding {
     padding-bottom: 3px;
-  }
-
-  article.card:nth-of-type(4) .card__text {
-    padding-top: 29px;
-  }
-
-  article.card:nth-of-type(4) .memories {
-    padding-top: 10px;
-  }
-
-  article.card:nth-of-type(5) .card__text {
-    padding-top: 29px;
-  }
-
-  article.card:nth-of-type(5) .memories {
-    padding-top: 9px;
-  }
-
-  article.card:nth-of-type(6) .card__text {
-    padding-top: 30px;
-  }
-
-  article.card:nth-of-type(6) .memories {
-    padding-top: 9px;
-  }
-
-  article.card:nth-of-type(7) .card__text {
-    padding-top: 31px;
-  }
-
-  article.card:nth-of-type(7) .memories {
-    padding-top: 9px;
-    padding-bottom: 5px;
-  }
-
-  article.card:nth-of-type(8) .card__text {
-    padding-top: 30px;
-  }
-
-  article.card:nth-of-type(8) .memories {
-    padding-top: 10px;
   }
 
   .button__download {
