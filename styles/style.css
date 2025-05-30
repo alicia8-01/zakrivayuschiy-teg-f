@@ -61,7 +61,7 @@
 
 .main {
   display: flex;
-  gap: 50px;
+  gap: 52px;
   flex-direction: column;
   align-items: center;
   padding-block-end: 103px;
@@ -145,7 +145,7 @@ button {
   align-items: baseline;
   background-color: transparent;
   border-color: transparent;
-  transition: border-color 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 .card__like-button {
@@ -174,10 +174,6 @@ button {
   background-color: #fff;
 }
 
-.memories__padding {
-  padding-bottom: 5px;
-}
-
 .dialog {
   width: 353px;
   background-color: #fff;
@@ -196,7 +192,7 @@ button {
   align-content: center;
   justify-content: center;
   justify-items: center;
-  padding: 31.5px 32.5px 30.5px 31.5px;
+  padding: 28px;
 }
 
 .dialog:open .dialog-floppy {
@@ -234,9 +230,8 @@ button:focus {
   outline: none;
 }
 
-button:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--contour-color);
-  transition: border 0.3s ease;
 }
 
 .button:focus-visible {
@@ -362,19 +357,11 @@ button:focus-visible {
   }
 
   .card__text {
-    padding: 30px 25px 28px;
+    padding: 30px 28.2px 27px 25px;
   }
 
   .memories {
-    padding: 0px 25px 45px;
-  }
-
-  .memories__padding-mobile {
-    padding-bottom: 22px;
-  }
-
-  .memories__padding {
-    padding-bottom: 3px;
+    padding: 0px 25px 25px;
   }
 
   .button__download {
