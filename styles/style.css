@@ -345,6 +345,16 @@ button:focus {
   filter: contrast(27%);
 }
 
+@media (width <= 392px) {
+  .dialog:open {
+    grid-template-columns: 39px 216px;
+  }
+
+  .button__ok {
+    width: 275px;
+  }
+}
+
 @media (width <= 375px) {
   .header .card {
     padding-block: 120px;
